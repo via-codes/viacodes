@@ -1,4 +1,6 @@
 [submodule "viacodesasite/public"]
 	path = viacodesasite/public
-	url = https://github.com/via-codes/viacodes.github.io.git
+	url = https://github.com/via-codes/via-codes.github.io.git
 	branch = main
+[submodule "public"]
+	url = https://github.com/via-codes/via-codes.github.io.git

@@ -1,0 +1,380 @@
+baseURL: "https://via-codes.github.io/"
+relativeURLs: "True"
+languageCode: "en-us"
+title: "Via Code(s)"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: /blogs
+      weight: 1
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: ""
+  description: Via Code's Portfolio Site
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/images/Via.svg"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+  
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    defaultTheme: "light"
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # color:
+  #   textColor:
+  #   secondaryTextColor:
+  #   backgroundColor:
+  #   secondaryBackgroundColor:
+  #   primaryColor:
+  #   secondaryColor:
+
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    brandLogo: "/images/Via.svg" # Logo for the brand | default is the favicon variable
+    showBrandLogo: true # Show brand logo in nav bar | default is true
+    brandName: "" # Brand name for the brand | default is the title variable
+    disableSearch: true
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: ""
+    title: "Via Code(s)"
+    subtitle: "I am an iOS Engineer building dreams, one app at a time."
+    content: "Welcome to my brag page."
+    image: /images/AliviaAvatar500.png
+    button:
+      enable: true
+      name: "PDF Resume"
+      url: "ViaResume.pdf"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/via-codes
+        - icon: fab fa-x-twitter
+          url: https://twitter.com/codingmilf
+      customIcons:
+      
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/AliviaProfile.jpeg"
+    content: |-
+      I am a software developer specializing in iOS mobile development. I have a passion for the intersection of technology and accessibility. I believe there is a lot of room in technology for more universal design. I am currently working as the after hours subject matter expert with the DevMountain iOS cohorts as well as a part time role as a technical QA for Uni Industries. I work remotely out of the USA.
+
+      -
+    skills:
+      enable: true
+      title: "A few of my technical skills involve the following:"
+      items:
+        - "Design Patterns: MVC, MVVM"
+        - "Frameworks/Libraries: UIKit, CoreData, Firebase, In-House UI Packages, a variety of SDKs, URLSession"
+        - "Languages: Swift"
+        - "Other: Git/Github, Charles Proxy, Jira"
+
+  # Experience
+  experience:
+    enable: true
+    items:
+      - job: "Technical Quality Assurance Supervisor"
+        company: "Uni Industries"
+        date: "November 2023 - Current"
+        featuredLink:
+          enable: false
+          name: "View the project"
+          url: "https://example.com"
+        info:
+          enable: false
+        content: |
+          Uni Industries is a stealth startup that’s developing an AI-powered work management platform for Mac. The company has built a passionate team and is creating an amazing product. I built this role from the ground up, performing preliminary debugging, creating user stories, and manually testing builds as a valued consultant. 
+
+      - job: "Instructor, iOS Subject Matter Expert"
+        company: "DevMountain"
+        date: "Jul 2023 - Current"
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        info:
+          enable: false
+          content: 
+        content: |
+          I mentor budding developers who are brave enough to take on the iOS specialization portion of the DevMountain bootcamp. To keep things fresh and relevant to such a fast-growing industry, I’ve revamped and continue to evolve large portions of the curriculum.
+          
+
+      - job: "iOS Developer"
+        company: "Charter Communications"
+        date: "Feb 2023 - Aug 2023"
+        info:
+          enable: false
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        content: |
+          At Charter I grew from working on multiple apps in the same company. Occasionally brushing across the tvOS app, I mainly spent my time in Spectrum News and Spectrum SportsNet. This is where my passion for Accessibility and Universal Design had the opportunity to flourish. I grew skills in custom dynamic fonts and VoiceOver. 
+
+      - job: "Apprentice iOS Developer"
+        company: "Big Nerd Ranch"
+        date: "Jul 2022 - Jan 2023"
+        info:
+          enable: false
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        content: |
+          In my time here as an apprentice the foundations of working on a team while reinforcing the foundations of Swift. I worked as the shadow to many outstanding developers. I developed on MyFittnessPal focusing on the rebanding, which tickled my itch to learn a lot of storyboards and programmatic UI. 
+
+  # Education
+  education:
+    enable: false
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "Master of Business Administration"
+        school:
+          name: "University of California, Berkeley"
+          url: "https://example.org"
+        date: "2013 - 2015"
+        GPA: "3.8 out of 5.0"
+        content: |-
+          Extracurricular Activities
+            - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+      - title: "Bachelor of Science in Computer Science"
+        school:
+          name: "Massachusetts Institute of Technology"
+          url: "https://example.org"
+        date: "2009 - 2013"
+        GPA: "3.9 out of 5.0"
+        content: |-
+          I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
+          - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
+          - Face mask detection using a single convolutional neural network.
+
+          Extracurricular Activities
+            - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+        featuredLink:
+          enable: true
+          name: "My academic record"
+          url: "https://example.com"
+      - title: "High School"
+        school:
+          name: "Thomas Jefferson High School for Science and Technology."
+          url: "https://example.org"
+        GPA: "4.2 out of 5.0"
+        featuredLink:
+          enable: true
+          url: "https://example.com"
+
+  # Achievements
+  achievements:
+    enable: true
+    title: "Accolades"
+    items:
+      - title: iOS Dev Happy Hour
+        content: "Sept 2022 (Invited Speaker) - 
+        An international remote gathering of established and up-n-coming developers. I spoke about my journey and the taste of success I had landing my role at Big Nerd Ranch to break into the industry."
+        image: /images/HappyHour.jpg
+      - title: Cocoaheads
+        content: "Dec 2022 - 
+        A local gathering of fellow nerds, I presented my Tic-Tac-Toe app I had been developing while at my apprenticeship."
+        image: /images/CH.png
+      - title: Deep Dish Swift
+        content: "May 2023 (Invited Speaker) - 
+        Chicago’s very own iOS conference, I spoke about Mentorship and the role it’s played in my career and how to be a good mentor while on any stage of the path of being a developer."
+        url: https://www.youtube.com/watch?v=jH09g4CJAFw&t=327s
+        image: /images/dds.jpeg
+      - title: Empower Apps Podcast
+        url: https://podcasts.apple.com/us/podcast/empower-apps/id1437435392?i=1000635306667
+        content: "Invited Guest - 
+        Leo and I have a great conversation about diversity and accessibility in the industry and in apps."
+        image: /images/EmpowerApps.jpeg
+      - title: Kodeco Podcast Guest
+        content: "Invited Guest
+        As a quad interview, we spoke about being parents while living the life of work from home."
+        image: /images/kodeco.png
+        url: https://www.kodeco.com/37652016-kodeco-podcast-via-fairchild-jeff-rames-an-attempt-to-explore-the-true-work-life-balance-podcast-vol2-s1-e6
+
+  # projects
+  projects:
+    enable: false
+    # title: "Custom Name"
+    items:
+      - title: OS Dev Happy Hour - Sept 2022 (Invited Speaker)
+        content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
+        image: /images/projects/profile.png
+        featured:
+          name: Demo
+          link: https://hugo-profile.netlify.app
+        badges:
+          - "Hugo"
+          - "Bootstrap"
+          - "Javascript"
+        links:
+          - icon: fa fa-envelope
+            url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/hugo-profile
+          - icon: fab fa-twitter
+            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+
+      - title: Cocoaheads - Dec 2022
+        content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
+        image: /images/projects/converter.jpg
+        featured:
+          name: Demo
+          link: https://django-converter.herokuapp.com
+        badges:
+          - "Django"
+          - "Bootstrap"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/converter
+
+      - title: Hugo Profile V2
+        content: A clean and simple Hugo template for personal portfolio and blog.
+        image: /images/projects/profile2.jpg
+        featured:
+          name: Demo V2
+          link: https://hugo-profile-2.netlify.app
+        badges:
+          - "Hugo"
+          - "Bootstrap"
+          - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/HugoProfileV2
+
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: Don’t be shy, say howdy!
+    email: via.fairchild@gmail.com
+    btnName: Mail me
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
